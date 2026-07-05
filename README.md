@@ -1,49 +1,58 @@
-Project Title: A Comprehensive Measure of Well-Being (HDI Prediction)
+A Comprehensive Measure of Well-Being (HDI Prediction)
+
 Overview
-This project leverages Machine Learning to predict the Human Development Index (HDI) based on key socio-economic indicators. The application utilizes a Linear Regression model to provide accurate forecasts, enabling data-driven insights into global well-being.
+
+This project leverages Machine Learning to predict the Human Development Index (HDI) based on key socio-economic indicators such as income, education, and life expectancy. The goal is to move beyond GDP-based rankings and provide a more comprehensive, data-driven measure of a country's well-being using a trained regression model.
+
+The project follows a structured SDLC-style workflow — from ideation through deployment and demonstration — with each phase documented in its own folder.
 
 Live Application
-You can access the live version of the project here:
-https://hdiproject.onrender.com
+
+🔗 https://hdiproject.onrender.com
 
 Key Features
-Predictive Modeling: Uses a trained Linear Regression model to estimate HDI scores.
 
-User-Friendly Interface: A responsive web form built with HTML/CSS for easy data input.
 
-Dynamic Results: Real-time updates displaying the predicted HDI score and development category.
+Predictive Modeling – Trained regression model estimates HDI scores from socio-economic inputs.
+User-Friendly Interface – Simple, responsive web form for entering indicator values.
+Dynamic Results – Real-time prediction of HDI score and corresponding development category (Low / Medium / High / Very High).
+Cloud Deployment – Fully deployed and publicly accessible via Render.
 
-Cloud Deployment: Fully deployed and accessible via the web using Render.
 
 Tech Stack
-Backend: Python (Flask)
 
-Machine Learning: Scikit-Learn, Pandas, NumPy
+LayerTechnologyModeling & AnalysisPython, Jupyter Notebook, Scikit-Learn, Pandas, NumPyBackendPython (Flask)FrontendHTML5, CSS3, JavaScriptDeploymentRender
 
-Frontend: HTML5, CSS3, JavaScript
+Repository Structure
 
-Deployment: Render
+This repository documents the project across its full development lifecycle:
 
-Project Structure
-app.py: Main Flask application handling routing and model inference.
+├── 1.Brainstorming & Ideation/     # Problem statement, idea generation
+├── 2.Requirement Analysis/         # Functional & non-functional requirements
+├── 3.Project Design Phase/         # Data flow diagrams, architecture, UI design
+├── 4.Project Planning Phase/       # Sprint/milestone planning
+├── 5.Project Development Phase/    # Model training notebooks & app code
+├── 6.Project Testing/              # Test cases and validation results
+├── 7.Project Documentation/        # Final project report and supporting docs
+├── 8.Project Demonstration/        # Demo video / screenshots
+└── README.md
 
-models/: Contains the serialized hdi_model.pkl and scaler.pkl files.
 
-templates/: Contains the index.html frontend file.
+Note: Model training and experimentation are primarily carried out in Jupyter Notebooks under the Development phase folder; the deployable web app (Flask backend + HTML/CSS frontend) is built from the resulting trained model.
 
-static/: Contains CSS styling and project assets.
 
-requirements.txt: List of necessary Python dependencies.
 
-Installation Instructions
+Getting Started
+
 Clone the repository:
-git clone https://github.com/uryapraveen/A-Comprehensive-Measure-of-Well-Being
 
-Install the required dependencies:
-pip install -r requirements.txt
+bashgit clone https://github.com/uryapraveen/A-Comprehensive-Measure-of-Well-Being
+cd A-Comprehensive-Measure-of-Well-Being
 
-Run the application locally:
-python app.py
+Explore the notebooks in the Development Phase folder to see the data preprocessing, model training, and evaluation steps. To run the web application locally, install the dependencies listed for the Flask app (see the Development Phase folder) and run:
 
-Performance Metrics
-The model was evaluated and achieved an R-squared score of 0.981, indicating high predictive accuracy. Stress testing was conducted using Postman, confirming stable response times under concurrent user load.
+bashpython app.py
+
+Performance
+
+The trained model achieved an R² score of 0.981, indicating high predictive accuracy against actual HDI values. The deployed application was stress-tested using Postman to confirm stable response times under concurrent load.
